@@ -29,7 +29,7 @@
 const char ssid[]        = SECRET_SSID;
 const char pass[]        = SECRET_PASS;
 const char broker[]      = SECRET_BROKER;
-const char* certificate  = SECRET_CERTIFICATE;
+//const char* certificate  = SECRET_CERTIFICATE;
 
 WiFiSSLClient    wifiClient;            // Used for the TCP socket connection
 //BearSSLClient sslClient(wifiClient); // Used for SSL/TLS connection, integrates with ECC508
@@ -48,7 +48,7 @@ void setup() {
   // must have a unique client id. The MQTTClient will generate
   // a client id for you based on the millis() value if not set
   //
-  mqttClient.setId("adafeathermqtt");
+  mqttClient.setId("basicPubSub");
 
   // Set the message callback, this function is
   // called when the MQTTClient receives a message
